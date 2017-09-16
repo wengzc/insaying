@@ -1,9 +1,8 @@
 .commentCount {
   font-size: 15px;
   padding: 8px 10px;
-  background-color: #f6f6f6;
+  /*background-color: #f6f6f6;*/
   border-radius: 3px 3px 0 0;
-  /*border-bottom: 1px solid #DDD;*/
 }
 .item {
   position: relative;

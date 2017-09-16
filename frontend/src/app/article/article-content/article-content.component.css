@@ -112,7 +112,7 @@ ul.dropdown-menu {
 .comment .info {
   font-size: 15px;
   padding: 8px 10px;
-  background-color: #f6f6f6;
+  /*background-color: #f6f6f6;*/
   border-bottom: 1px solid #DDD;
 }
 
