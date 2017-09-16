@@ -9,5 +9,9 @@ module.exports = {
         maxAge: 2592000000
     },
     mongodb: ''
+<<<<<<< HEAD
 	//set the MongoDB connection string to access your new database.
+=======
+    //set the MongoDB connection string to access your new database.
+>>>>>>> bce38bdfd5e267e08ed145f51f706e1e1a3c756c
 };
