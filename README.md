@@ -43,9 +43,9 @@ After installing inSaying, follow these steps:
     
 Then switch the backend directory  to frontend directory and run the following command:
 
-	  $ cd frontend
-	  $ npm install
-	  $ npm start
+	$ cd frontend
+	$ npm install
+	$ npm start
 	  
 ## License
 
