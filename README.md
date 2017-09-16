@@ -29,6 +29,13 @@ Node.js 6.x +
     $ git clone git@github.com:wengzc/insaying.git
 
 ## Run 
+After installing inSaying, follow these steps:
+
+1.Create a MongoDB database.
+
+2.In the file backend/config/default.js set the MongoDB connection string to access your new database.
+
+3.In the command line type the following:
 
     $ cd backend
     $ npm install
