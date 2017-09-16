@@ -1,0 +1,96 @@
+.wrapper {
+  position: absolute;
+  width: 340px;
+  top: 50%;
+  left: 50%;
+  margin-left: -170px;
+  margin-top: -100px;
+}
+.container h2 {
+  /*color: #2c3f51;*/
+  text-align: center;
+}
+.input{
+  position: relative;
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+.error {
+  margin-bottom: 10px;
+}
+.input input {
+  border: none;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  /*box-shadow: 0 1px 2px 0 rgba(55,55,66,0.25);*/
+  padding-left: 2.8em;
+  font-size: 1em;
+}
+/*.input input:focus {*/
+  /*outline: none;*/
+/*}*/
+button.sumbit {
+  width: 100%;
+  height: 40px;
+  font-size: 1.5em;
+  padding: 5px 40px;
+  border: none;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 1px 1px 0 0 rgba(55,55,66,0.7);
+}
+button.sumbit:hover {
+  background-color: #f9f9e5;
+}
+button.sumbit:focus {
+  outline: none;
+}
+.fa {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  margin-top: -14px;
+}
+.warning {
+  color: #a94342;
+  margin: 5px 0;
+  font-size: 1.2em;
+}
+.withoutAcount {
+  font-size: 1em;
+  margin-top: 15px;
+  text-align: center;
+}
+.withoutAcount a {
+  color: #4f98d6;
+  opacity: 0.8;
+}
+.withoutAcount a:hover {
+  border-bottom: 1px solid #000;
+  opacity: 1;
+}
+.loginResult {
+  color: #a94342;
+  font-size: 1.4em;
+  margin-top: 20px;
+  text-align: center;
+}
+
+
+@media (max-width: 767px) {
+  .wrapper {
+    padding: 0 20px;
+    top: 20%;
+    margin-top: 0;
+  }
+  .input{
+    margin-bottom: 10px;
+  }
+  .error {
+    margin-bottom: 5px;
+  }
+  button.sumbit:hover {
+    background-color: #f2f2f2;
+  }
+}

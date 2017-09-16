@@ -1,0 +1,39 @@
+<navbar></navbar>
+<div class="main">
+  <div class="content">
+    <div class="sidebar">
+      <sidebar></sidebar>
+    </div>
+    <div class="notifications">
+      <div class="tab-nav">
+        <ul>
+          <li>
+            <a routerLink="/user/notifications/comments" (click)="reload()" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+              <i class="fa fa-comment-o"></i>评论
+              <span class="notificationsCount" *ngIf="newCommentsCount > 0">{{newCommentsCount}}</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/user/notifications/likes" (click)="reload()" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+              <i class="fa fa-heart-o"></i>喜欢
+              <span class="notificationsCount" *ngIf="newLikesCount > 0">{{newLikesCount}}</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/user/notifications/votes" (click)="reload()" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+              <i class="fa fa-thumbs-o-up"></i>赞
+              <span class="notificationsCount" *ngIf="newVotesCount > 0">{{newVotesCount}}</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <router-outlet>
+      </router-outlet>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <div class="footer-inner">
+    <footer></footer>
+  </div>
+</div>

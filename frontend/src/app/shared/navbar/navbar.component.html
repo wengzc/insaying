@@ -1,0 +1,42 @@
+<div class="top">
+  <div class="navbar">
+    <nav>
+      <a class="homepage" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+        <i class="fa fa-home"></i>首页
+      </a>
+      <a class="creating" routerLink="/article/write" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+        <i class = "fa fa-pencil-square-o fa-lg"></i>创作
+      </a>
+      <a routerLink="/user/register" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" *ngIf = "!userService.isLogin">
+        注册
+      </a>
+      <a routerLink="/user/login" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" *ngIf = "!userService.isLogin">
+        登陆
+      </a>
+      <a routerLink="/user/{{userService?.userInfo?._id}}/article" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" *ngIf = "userService.isLogin">
+        {{ userService?.userInfo?.name }}
+      </a>
+      <a routerLink="/user/notifications/comments" class = "notifications" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" *ngIf = "userService.isLogin">
+        消息
+        <span *ngIf = "userService.isLogin && newCommentsCount + newLikesCount + newVotesCount > 0">
+          {{newCommentsCount + newLikesCount + newVotesCount}}
+        </span>
+      </a>
+      <a routerLink="/user/settings/basics" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" *ngIf = "userService.isLogin">
+        设置
+      </a>
+     <a href="javascript:void(0);" (click)="signout()" *ngIf = "userService.isLogin">
+       登出
+     </a>
+    </nav>
+    <div class="flag">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="flag">
+        在说
+      </a>
+    </div>
+    <!--<div class="search">-->
+      <!--<input type="text" placeholder="搜索">-->
+      <!--<i class="fa fa-search fa-lg"></i>-->
+    <!--</div>-->
+  <!--</div>-->
+</div>

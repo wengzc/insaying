@@ -1,0 +1,25 @@
+
+<navbar></navbar>
+<div class="main">
+  <div class="content">
+    <div class="sidebar">
+      <sidebar></sidebar>
+    </div>
+    <div class="wrapper">
+      <div class="articleList">
+        <article-list [articlelist]="articles"></article-list>
+        <div class="page">
+          <pagination [activePage]="activePage" [lastPage]="lastPage" (onPrevPage)="prevPage()" (onNextPage)="nextPage()" ></pagination>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <div class="footer-inner">
+    <footer></footer>
+  </div>
+</div>
+
+
+

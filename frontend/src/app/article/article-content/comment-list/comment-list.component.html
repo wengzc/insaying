@@ -1,0 +1,99 @@
+  <div class="commentCount">
+    <i class = "fa fa-comments-o fa-lg"></i>
+    <span *ngIf="commentsCount === 0">目前还没有评论</span>
+    <span *ngIf="commentsCount > 0">
+      {{ commentsCount }}条评论
+    </span>
+  </div>
+  <div *ngFor="let comment of commentlist; let index = index">
+    <div class="item">
+      <div class="commentAvatar">
+        <a routerLink="/user/{{comment?.author._id}}/article">
+          <img height="50" width="50" src="{{serverUrl}}/img/{{comment?.author?.avatar}}">
+        </a>
+      </div>
+      <div class="commentCentent">
+        <div class="commentInfo">
+          <span class="index">{{index + 1}}楼</span>
+          <span class="dot">
+            <a routerLink="/user/{{comment?.author._id}}/article">
+              {{comment?.author.name }}
+              <span *ngIf="comment?.author.name === articleAuthor" class="tag">作者</span>
+            </a>
+          </span>
+          <span class="dot">{{comment?.created_at }}</span>
+          <a href="javascript:void(0);" class="thumbs-o-up" (click)="vote(comment)" [class.lightenVote]="comment?.lightenZan">
+            <i class="fa fa-thumbs-o-up"></i>
+            <span *ngIf="comment?.votes.length > 0">{{comment?.votes.length}}</span>
+          </a>
+        </div>
+        <p>
+          {{comment?.content}}
+        </p>
+        <div class="command">
+          <a href="javascript:void(0);" (click)="selectComment(comment)">
+            <i class="fa fa-mail-reply"></i>
+          </a>
+          <div  class="btn-group" dropdown container="body" *ngIf="userService.isLogin && userService?.userInfo?._id === comment?.author?._id">
+            <a href="javascript:void(0);">
+              <i dropdownToggle class="fa fa-ellipsis-h" ></i>
+            </a>
+            <ul *dropdownMenu class="dropdown-menu dropdown-menu-right" role="menu">
+              <li role="menuitem">
+                <a class="dropdown-item" routerLink="#" (click)="delete(comment)">
+                  <i class = "fa fa-trash-o"></i> 删除
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="replies" *ngIf="comment?.replies.length > 0">
+        <div *ngFor="let reply of comment?.replies" class="replyItem">
+          <a routerLink="/user/{{reply?.author._id}}/article" class="replyAvatar">
+            <img height="30" width="30" src="{{serverUrl}}/img/{{reply?.author?.avatar}}">
+          </a>
+          <div class="replyContent">
+            <p>
+              <a routerLink="/user/{{reply?.author._id}}/article">{{reply?.author.name}}</a>
+              <span *ngIf="reply?.author.name === articleAuthor" class="tag">作者</span>
+              :
+              <a routerLink="/user/{{reply?.receiver._id}}/article"> @{{reply?.receiver.name}} </a>
+              {{reply?.content}}
+            </p>
+            <span>{{ reply?.created_at }}</span>
+            <div class="command">
+              <a href="javascript:void(0);" (click)="selectComment(comment, reply)">
+                <i class="fa fa-mail-reply"></i>
+              </a>
+              <div  class="btn-group" dropdown container="body" *ngIf="userService.isLogin && userService?.userInfo?._id === reply?.author?._id">
+                <a href="javascript:void(0);">
+                  <i dropdownToggle class="fa fa-ellipsis-h" ></i>
+                </a>
+                <ul *dropdownMenu class="dropdown-menu dropdown-menu-right" role="menu">
+                  <li role="menuitem">
+                    <a class="dropdown-item" routerLink="#" (click)="delete(reply)">
+                      <i class = "fa fa-trash-o"></i> 删除
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div #scrollTarget class="publishReply" *ngIf="comment === selectedComment">
+          <textarea #textarea [(ngModel)]="replyValue" placeholder="从这里开始输入回复..." (ngModelChange)="valueChange()" (click)="valueChange()"></textarea>
+          <div *ngIf="errorMsg" class="warning">
+            {{errorMsg}}
+          </div>
+          <div class="btnCommand">
+            <span class="cancel" (click)="cancelReply(comment)">取消</span>
+            <button class="sumbit" (click)="publishReply(comment)">回复</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+

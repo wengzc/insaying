@@ -1,0 +1,45 @@
+<div class="main">
+  <div *ngFor="let comment of comments; let index = index">
+    <div class="item" [class.newComment]="comment?.status === 0">
+      <div class="commentAvatar">
+        <a routerLink="/user/{{comment?.author._id}}/article">
+          <img height="50" width="50" src="{{serverUrl}}/img/{{comment?.author?.avatar}}">
+        </a>
+      </div>
+      <div class="commentCentent" *ngIf="comment?.article">
+        <div class="commentInfo">
+          <a routerLink="/user/{{comment?.author._id}}/article">
+            {{comment?.author.name }}
+          </a>
+          <span>评论了你的文章</span>
+          <a routerLink="/article/{{comment?.article?._id}}">{{comment?.article?.title }}</a>
+        </div>
+        <p>
+          <a routerLink="/user/{{comment?.receiver._id}}/article" *ngIf="comment?.root_comment">@{{comment?.receiver.name}}</a>
+          {{comment?.content}}
+        </p>
+        <span class="createdAt">{{comment?.created_at }}</span>
+      </div>
+      <div class="commentCentent" *ngIf="comment?.root_comment">
+        <div class="commentInfo">
+          <a routerLink="/user/{{comment?.author._id}}/article">
+            {{comment?.author.name }}
+          </a>
+          <span>回复了你的评论</span>
+          <span class="replyContent">{{comment?.reply_comment.content}}</span>
+          <span> 来自文章
+          <a routerLink="/article/{{comment?.root_article?._id}}">{{comment?.root_article?.title }}</a>
+          </span>
+        </div>
+        <p>
+          <a routerLink="/user/{{comment?.receiver._id}}/article" *ngIf="comment?.root_comment">@{{comment?.receiver.name}}</a>
+          {{comment?.content}}
+        </p>
+        <span class="createdAt">{{comment?.created_at }}</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="comments?.length === 0" class="withoutNotifications">
+  暂无消息!
+</div>

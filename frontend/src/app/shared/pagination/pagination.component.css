@@ -1,0 +1,33 @@
+ul {
+  list-style: none;
+  text-align: center;
+  margin-bottom: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+ul li {
+   display: inline-block;
+ }
+a {
+  display: block;
+  padding: 0.2em 0.5em;
+  font-size: 16px;
+  color: #2c3f51;
+}
+a:hover {
+  background-color: #f2f2e2;
+}
+
+a[rel="prev"]:before {
+  content: "\00AB";
+  padding-right: 0.5em;
+}
+
+a[rel="next"]:after {
+  content: "\00BB";
+  padding-left: 0.5em;
+}
+a.disabled {
+  cursor: not-allowed;
+  opacity: 0.3;
+}

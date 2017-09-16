@@ -1,0 +1,48 @@
+.item {
+  position: relative;
+  border-bottom: 1px solid #DDD;
+  padding: 10px
+}
+.commentAvatar {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+}
+.commentAvatar img {
+  border-radius: 5px;
+}
+.commentCentent {
+  padding-left: 70px;
+}
+.commentCentent .commentInfo a {
+  font-size: 12px;
+}
+.commentCentent .commentInfo span {
+  color: #999;
+  font-size: 12px;
+}
+.commentCentent .commentInfo span:before {
+  content: "  •  ";
+}
+.commentInfo span .author {
+  padding: 2px 3px;
+  border-radius: 2px;
+  background-color: #5cb85c;
+  color: #fff;
+}
+.commentCentent p {
+  font-size: 16px;
+  margin-top: 5px;
+  word-wrap: break-word;
+}
+.commentCentent span {
+  color: #999;
+  /*font-size: 13px;*/
+}
+.commentCentent span a:hover {
+  border-bottom: 1px solid;
+}
+.withoutAcount {
+  min-height: 240px;
+  padding: 20px 10px;
+}

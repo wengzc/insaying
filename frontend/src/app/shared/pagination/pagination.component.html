@@ -1,0 +1,9 @@
+<ul>
+  <li>
+    <a href="javascript:void(0);" rel="prev" [class.disabled]="activePage <= 1" (click)="prevPage()">Prev</a>
+  </li>
+  <li>第{{activePage}}页</li>
+  <li>
+    <a href="javascript:void(0);" rel="next"  [class.disabled]="lastPage" (click)="nextPage()">Next</a>
+  </li>
+</ul>

@@ -1,0 +1,56 @@
+<div class="wrapper">
+  <div class="panel user" *ngIf="userService?.isLogin">
+    <div class="topInfo">
+      <div class="avatar_name">
+        <a routerLink="/user/{{userService?.userInfo?._id}}/article" class="avatar">
+          <img height="50" width="50" src="{{serverUrl}}/img/{{userService?.userInfo?.avatar}}">
+        </a>
+        <a routerLink="/user/{{userService?.userInfo?._id}}/article">
+          {{ userService?.userInfo?.name }}
+        </a>
+      </div>
+      <span class="bio" *ngIf="userService?.userInfo?.bio">
+      " {{ userService?.userInfo?.bio }} "
+      </span>
+      <span class="bio" *ngIf="!userService?.userInfo?.bio">
+      " 这个人很懒，还没有添加任何描述… "
+    </span>
+    </div>
+    <div class="countInfo">
+      <a routerLink="/user/{{userService?.userInfo._id}}/article">
+        <span>文章 </span>{{userArticlesCount}}
+      </a>
+      <a routerLink="/user/{{userService?.userInfo._id}}/like">
+        <span>喜欢 </span>{{userlikesCount}}
+      </a>
+      <a class="receivedLikesCount">
+        <span>获得喜欢 </span>{{userReceivedlikesCount}}
+      </a>
+    </div>
+  </div>
+  <div class="panel" *ngIf="!userService?.isLogin">
+    <div class="info">
+      <span>
+        在说 是一个创作与分享的地方
+      </span>
+    </div>
+    <div class="enter">
+      您可以
+      <a routerLink="/user/register">
+        <span >注册</span>
+      </a>或
+      <a routerLink="/user/login">
+        <span >登陆</span>
+      </a>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="createArticle" >
+      <a routerLink="/article/write">
+        <i class = "fa fa-pencil-square-o fa-lg"></i>
+        <span>创作新文章</span>
+      </a>
+    </div>
+  </div>
+
+</div>

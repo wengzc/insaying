@@ -1,0 +1,37 @@
+.item {
+  position: relative;
+  border-bottom: 1px solid #DDD;
+  padding: 10px 10px 3px 10px;
+}
+.item a {
+  font-size: 13px;
+}
+.item a:hover {
+  border-bottom: 1px solid;
+}
+.item span.createdAt {
+  font-size: 12px;
+  color: #999;
+}
+.info {
+  margin-bottom: 10px;
+}
+.info span {
+  font-size: 13px;
+  color: #999;
+}
+.info span.darkColor {
+  font-size: 13px;
+  color: #333;
+}
+.info span.commentCentent {
+  margin-right: 10px;
+}
+.withoutNotifications {
+  min-height: 240px;
+  padding: 20px 10px;
+}
+.newVote {
+  /*background-color: #f8fafb;*/
+  background-color: #f4f8fb;
+}

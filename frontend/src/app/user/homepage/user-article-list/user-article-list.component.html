@@ -1,0 +1,9 @@
+<div class="articleList" *ngIf="articlesCount > 0">
+  <article-list [articlelist]="articleList"></article-list>
+  <div class="page">
+    <pagination [activePage]="activePage" [lastPage]="lastPage" (onPrevPage)="prevPage($event)" (onNextPage)="nextPage($event)" [user_id]="user_id"></pagination>
+  </div>
+</div>
+<div *ngIf="articlesCount === 0" class="withoutArticle">
+  这个人很懒,还没有发表文章!
+</div>

@@ -1,0 +1,142 @@
+.mobi-top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.22);
+  background-color: #f6f6f6;
+  color: #556;
+  z-index: 1000;
+  display: none;
+}
+.navbar {
+  position: relative;
+  height: 40px;
+  width: 65%;
+  margin: auto;
+}
+.navbar a{
+  line-height: 40px;
+  color: #333;
+  font-size: 18px;
+}
+.navbar a.cancel {
+  float: left;
+  margin-left: 10px;
+}
+.navbar a.mobi-update {
+  float: right;
+  margin-right: 10px;
+}
+
+
+.main {
+  width: 50%;
+  padding: 10px;
+  margin: 0 auto 80px auto;
+}
+.md-editor {
+  padding: 10px;
+  /*width: 50%;*/
+  /*margin: 20px auto;*/
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px 0 rgba(35,35,38,0.25);
+}
+.publishResult {
+  color: #a94342;
+  font-size: 1.4em;
+  margin-top: 20px;
+  text-align: center;
+
+}
+.title {
+  height: 44px;
+  min-height: 44px;
+  width: 100%;
+  font-size: 25px;
+  /*overflow: hidden;*/
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #DDD;
+  padding-left: 10px;
+}
+.title:focus {
+  outline: none;
+}
+.publish {
+  width: 100px;
+  position: relative;
+  /*top: 20px;*/
+  /*right: 10px;*/
+  float: right;
+  margin-top: 20px;
+}
+.publish button.sumbit {
+  font-size: 16px;
+  width: 100%;
+  height: 30px;
+
+  padding-left: 20px;
+  border: 1px solid rgba(35,35,38,0.25);
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 1px 1px 0 0 rgba(55,55,66,0.7);
+}
+.publish button.sumbit:hover {
+  /*background-color: #f2f2f2;*/
+  background-color: #f9f9e5;
+  border: 1px solid rgba(35,35,38,0.5);
+}
+.publish button.sumbit:focus {
+  outline: none;
+}
+
+.publish .fa {
+  position: absolute;
+  left: 25px;
+  top: 9px;
+}
+.warning {
+  color: #a94342;
+  margin: 5px 10px;
+  font-size: 1.2em;
+
+}
+
+
+
+@media (max-width: 767px) {
+  .mobi-top {
+    display: block;
+  }
+  .top {
+    display: none;
+  }
+  .navbar {
+    width: 100%;
+  }
+  .main {
+    width: 100%;
+    padding: 0;
+    margin-top: -10px;
+  }
+  .md-editor {
+    width: 100%;
+    padding: 0;
+  }
+  .title {
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+  }
+  .publish {
+    display: none;
+  }
+}
+
+
+
+
+

@@ -1,0 +1,83 @@
+.wrapper {
+  width: 100%;
+}
+
+.panel {
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 3px;
+  border: none;
+  box-shadow: 0 1px 2px 0 rgba(35,35,38,0.25);
+  margin-bottom: 15px;
+}
+.panel a {
+  color: #2c3f51;
+  font-size: 16px;
+}
+.panel a:hover {
+  color: #000;
+}
+.avatar_name {
+  margin-bottom: 10px;
+}
+.avatar_name .avatar {
+  margin-right: 10px;
+}
+.avatar_name .avatar img {
+  border-radius: 5px;
+}
+.bio {
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+.user {
+  padding-left: 0;
+  padding-right: 0;
+}
+.user .topInfo {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #DDD;
+}
+.countInfo {
+  margin: 10px 10px 0 10px;
+  text-align: center;
+}
+.countInfo a {
+  padding: 0 8px 0 8px;
+  font-size: 15px;
+  border-right: 1px solid #DDD;
+  color: #2c3f51;
+}
+.countInfo a span {
+  font-size: 13px;
+  color: #888;
+}
+.countInfo a:hover {
+  color: #000;
+}
+.countInfo a.receivedLikesCount {
+  border-right: none;
+}
+.countInfo a.receivedLikesCount:hover {
+  color: #2c3f51;
+}
+.createArticle {
+  text-align: center;
+}
+.info {
+  margin-bottom: 10px;
+  text-align: center;
+}
+.enter {
+  text-align: center;
+}
+.enter a {
+  color: #4f98d6;
+  font-size: 18px;
+  opacity: 0.8;
+}
+.enter a:hover {
+  border-bottom: 1px solid #000;
+}

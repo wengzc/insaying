@@ -1,0 +1,40 @@
+.articleItem {
+  padding: 10px;
+  border-bottom: 1px solid #DDD;
+}
+.articleItem .avatar {
+  margin-top: -1px;
+  float: left;
+}
+.articleItem .avatar img {
+  border-radius: 5px;
+}
+.articleItem .title {
+  padding-left: 70px;
+}
+.articleItem .title a {
+  font-size: 20px;
+  color: #2c3f51;
+}
+
+.articleItem .title a:hover {
+  color: #000;
+  border-bottom: 1px solid #333 ;
+}
+.articleItem .title .info {
+  font-size: 12px;
+  color: #999;
+}
+.articleItem .title span a.lighten{
+  font-size: 13px;
+  color: #2c3f51;
+  /*opacity: 0.8;*/
+}
+.articleItem .title .info span.dot:before {
+  content: "  •  ";
+}
+
+@media (max-width: 767px) {
+  .articleItem .title {
+    padding-left: 60px;
+  }}

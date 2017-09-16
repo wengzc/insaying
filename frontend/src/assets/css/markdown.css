@@ -1,0 +1,132 @@
+.html {
+  font-size: 16px;
+  line-height: 1.45;
+  color: #2c3f51;
+}
+
+.html h1, .html h2, .html h3, .html h4, .html h5, .html h6 {
+  font-weight: bold;
+}
+
+.html h1 {
+  color: #000000;
+  font-size: 28px;
+}
+
+.html h2 {
+  color: #000000;
+  font-size: 24px;
+}
+
+.html h3 {
+  font-size: 18px;
+}
+
+.html h4 {
+  font-size: 16px;
+}
+
+.html h5 {
+  font-size: 14px;
+}
+
+.html h6 {
+  font-size: 14px;
+}
+
+.html hr {
+  height: 0.2em;
+  border: 0;
+  color: #CCCCCC;
+  background-color: #CCCCCC;
+}
+
+.html p, .html blockquote, .html ul, .html ol, .html dl, .html li, .html table, .html pre {
+  margin: 15px 0;
+}
+
+.html p{
+  margin:1em 0;
+}
+
+.html pre {
+  color: white;
+  /*background-color: #F8F8F8;*/
+  border: 1px solid #CCCCCC;
+  border-radius: 3px;
+  overflow: auto;
+  padding: 4px 9.5px;
+  background-color: #23241f;
+}
+
+.html pre code {
+  /*background-color: #F8F8F8;*/
+  border: none;
+  padding: 0;
+  /*font-size: 1em;*/
+  line-height: 1.7;
+}
+
+.html code {
+  font-family: Consolas, Monaco, Andale Mono, monospace;
+  /*background-color:#F8F8F8;*/
+  border: 1px solid #CCCCCC;
+  border-radius: 3px;
+  padding: 0 0.2em;
+  line-height: 1;
+}
+
+.html pre > code {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+
+.html a{ color: #0645ad; text-decoration:none;}
+.html a:visited{ color: #0b0080; }
+.html a:hover{ color: #06e; }
+.html a:active{ color:#faa700; }
+.html a:focus{ outline: thin dotted; }
+.html a:hover, a:active{ outline: 0; }
+
+/*.html ::-moz-selection{background:rgba(255,255,0,0.3);color:#000}*/
+/*.html ::selection{background:rgba(255,255,0,0.3);color:#000}*/
+
+/*.html a::-moz-selection{background:rgba(255,255,0,0.3);color:#0645ad}*/
+/*.html a::selection{background:rgba(255,255,0,0.3);color:#0645ad}*/
+
+.html blockquote{
+  color:#666666;
+  margin:0;
+  padding-left: 3em;
+  border-left: 0.5em #EEE solid;
+}
+
+.html ul, .html .htmlol { margin: 1em 0; padding: 0 0 0 2em; }
+.html li p:last-child { margin:0 }
+.html dd { margin: 0 0 0 2em; }
+
+/*.html img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; max-width:100%;}*/
+
+.html img {
+  display: block;
+  margin: 30px auto;
+  max-width: 90%;
+  border-radius: 2px;
+}
+
+.html table { border-collapse: collapse; border-spacing: 0; }
+.html td { vertical-align: top; }
+
+/*@media only screen and (min-width: 480px) {*/
+  /*.html{*/
+    /*font-size:14px;*/
+  /*}*/
+/*}*/
+
+/*@media only screen and (min-width: 768px) {*/
+  /*.html{*/
+    /*font-size:16px;*/
+  /*}*/
+/*}*/

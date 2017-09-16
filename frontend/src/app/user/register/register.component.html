@@ -1,0 +1,30 @@
+<navbar></navbar>
+<!--<div class="regiter">-->
+    <div class="wrapper">
+      <!--<h2>注册</h2>-->
+      <div class="input" [class.error]="errorMsg1">
+        <input type = "text" placeholder="用户名" [(ngModel)]="username" (ngModelChange)="valueChange()" (click)="valueChange()" name="username">
+        <i class="fa fa-user fa-2x"></i>
+      </div >
+      <div *ngIf="errorMsg1" class="warning">{{errorMsg1}}</div>
+      <div class="input">
+        <input type = "password" placeholder="密码" [(ngModel)]="newPassword" (ngModelChange)="valueChange()" (click)="valueChange()" name="newPassword">
+        <i class="fa fa-key fa-2x"></i>
+      </div>
+      <div class="input" [class.error]="errorMsg2">
+        <input type = "password" placeholder="确认密码" [(ngModel)]="repeatPassword" (ngModelChange)="valueChange()" (click)="valueChange()" name="repeatPassword">
+        <i class="fa fa-key fa-2x"></i>
+      </div>
+      <div *ngIf="errorMsg2" class="warning">{{errorMsg2}}</div>
+      <div>
+        <button type="button" (click)="register()" class="sumbit" [disabled]="errorMsg1 || errorMsg2">注册</button>
+      </div>
+      <div class="hasAcount">
+        <span>已有账号?</span>
+        <a routerLink="/user/login" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">立即登陆</a>
+      </div>
+      <div *ngIf="registerResult" class="registerResult">
+          {{ alert?.msg }}
+      </div>
+    </div>
+<!--</div>-->

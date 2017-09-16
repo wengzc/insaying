@@ -1,0 +1,80 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+a:hover {
+  text-decoration: none;
+}
+a:focus {
+  text-decoration: none;
+}
+
+.editor-toolbar {
+  border: none;
+  /*padding: 0;*/
+}
+.CodeMirror {
+  border: none;
+  padding: 0 10px 10px 10px;
+}
+.editor-preview {
+  overflow: auto;
+}
+.CodeMirror .editor-preview pre>code {
+  color: #fff !important;
+}
+.editor-preview pre,.editor-preview-side pre {
+  background-color: #23241f;
+}
+.editor-preview p img {
+  display: block;
+  margin: 10px auto auto 0;
+  max-width: 100%;
+  border-radius: 2px;
+}
+
+html {
+  height: 100%;
+}
+body {
+  /*background: #f2f2f2;*/
+  background-color: #f2f2e2;
+  position: relative;
+  height: 100%;
+}
+.html pre{
+  overflow: hidden;
+}
+.loading {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 50%;
+}
+
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+  border-color: transparent;
+  outline: none;
+}
+input:focus {
+  outline: none;
+}
+.h1, .h2, .h3, h1, h2, h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+

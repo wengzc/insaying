@@ -1,0 +1,19 @@
+<div class="main">
+  <div class="item">
+    <span>用户名 <i class="fa fa-fw fa-user-circle"></i>:</span> {{user?.name}}
+  </div>
+  <div class="item">
+    <span>个性签名 <i class="fa fa-fw fa-pencil"></i>:</span> {{user?.bio}}
+  </div>
+  <div class="item">
+    <span>Github <i class="fa fa-fw fa-github"></i>:</span>
+    <a href="{{user?.github}}" target="_blank">{{user?.github}}</a>
+  </div>
+  <div class="item">
+    <span>个人网站 <i class="fa fa-fw fa-globe"></i>:</span>
+    <a href="{{user?.website}}" target="_blank">{{user?.website}}</a>
+  </div>
+  <div class="item">
+    <span>注册时间 <i class="fa fa-fw fa-calendar-check-o"></i>:</span> {{user?.created_at}}
+  </div>
+</div>

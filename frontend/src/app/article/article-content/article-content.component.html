@@ -1,0 +1,84 @@
+<navbar></navbar>
+
+<div class="main">
+<div class="wrapper">
+  <div class="sidebar">
+    <author-sidebar [author]="article?.author" [articlesCount]="otherArticles?.length+1" [receivedlikesCount]="authorReceivedlikesCount"></author-sidebar>
+    <other-articles [otherArticles]="otherArticles"></other-articles>
+  </div>
+  <div class="article">
+    <div class="header">
+      <span class="title">{{article?.title}}</span>
+      <div class="articleInfo">
+        <span>
+          作者: <a routerLink="/user/{{article?.author._id}}/article">{{article?.author.name }}</a>
+        </span>
+        <span class="dot">发表于 {{article?.created_at }}</span>
+        <span class="dot">{{article?.pv}}次阅读</span>
+        <span class="dot" *ngIf="commentsCount > 0">{{commentsCount}}评论</span>
+        <span class="dot" *ngIf="commentsCount === 0">暂无评论</span>
+        <span class="dot" *ngIf="likes?.length > 0">{{likes?.length}}喜欢</span>
+      </div>
+    </div>
+    <div [innerHTML]="html" class="html"></div>
+    <div class="likeBtn" [class.lighten]="likePassed">
+      <a href="javascript:void(0);" (click)="like(article)">
+        <i class="fa fa-heart-o fa-lg" *ngIf="!likePassed"></i>
+        <i class="fa fa-heart fa-lg" *ngIf="likePassed"></i>
+        <span>喜欢</span> <span class="dot" *ngIf="likes?.length > 0">{{likes?.length}}</span>
+      </a>
+    </div>
+      <span *ngIf="article?.updated_at" class="updated_at">更新于{{article?.updated_at}}</span>
+    <div class="btn-group " dropdown container="body" *ngIf="userService.isLogin && userService?.userInfo?._id === article?.author?._id">
+      <a href="javascript:void(0);">
+        <i dropdownToggle class="fa fa-ellipsis-h" ></i>
+      </a>
+      <ul *dropdownMenu class="dropdown-menu dropdown-menu-right" role="menu">
+        <li role="menuitem">
+          <a class="dropdown-item" routerLink="/article/{{article._id}}/edit">
+            <i class = "fa fa-pencil"></i> 编辑
+          </a>
+        </li>
+        <li role="menuitem">
+          <a class="dropdown-item" href="javascript:void(0);" (click)="deleteArticle()">
+            <i class = "fa fa-trash-o"></i> 删除
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="commentlist">
+    <comment-list [commentlist]="comments" [commentsCount]="commentsCount" [articleAuthor]="article?.author.name"
+                  (onPublishReply)="publishReply($event)" (onDelete)="deleteComment($event)" (onVote)="vote($event)"></comment-list>
+    <div class="page" *ngIf="commentsCount > 0">
+      <pagination [activePage]="activeCommentsPage" [lastPage]="lastPage" (onPrevPage)="prevPage()" (onNextPage)="nextPage()"></pagination>
+    </div>
+  </div>
+  <div class="comment">
+    <div class="info">
+      <i class="fa fa-commenting-o fa-lg"></i>
+      <span>我来说几句</span>
+    </div>
+    <div class="content">
+      <textarea [(ngModel)]="commentValue" placeholder="从这里开始输入回复..." (ngModelChange)="valueChange()" (click)="valueChange()"></textarea>
+      <div *ngIf="errorMsg" class="warning">
+        {{errorMsg}}
+      </div>
+      <div *ngIf="commentPublishResult" class="commentPublishResult">
+          {{ alert?.msg }}
+      </div>
+      <button class="sumbit" (click)="publishComment()">回复</button>
+    </div>
+  </div>
+  <!--<div class="mobi-comment">-->
+    <!--<i class = "fa fa-pencil-square-o fa-lg"></i>-->
+    <!--<i class="fa fa-commenting-o fa-lg"></i>-->
+    <!--<span>我来说几句</span>-->
+  <!--</div>-->
+</div>
+</div>
+<div class="footer">
+  <div class="footer-inner">
+    <footer></footer>
+  </div>
+</div>

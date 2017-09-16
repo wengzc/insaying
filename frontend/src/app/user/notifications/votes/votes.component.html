@@ -1,0 +1,19 @@
+<div *ngFor="let vote of votes; let index = index">
+  <div class="item" [class.newVote]="vote?.status === 0">
+    <div class="info">
+      <span class="darkColor"> 获得
+        <a routerLink="/user/{{vote?.user._id}}/article">
+        {{vote?.user.name }}
+        </a>
+        的 1 个赞同 <i class="fa fa-thumbs-o-up"></i> :</span>
+      <span>评论</span>
+      <span class="darkColor commentCentent">{{vote?.comment.content}}</span>
+      <span>来自文章</span>
+      <a routerLink="/article/{{vote?.root_article?._id}}">{{vote?.root_article.title }}</a>
+    </div>
+    <span class="createdAt">{{vote?.created_at }}</span>
+  </div>
+</div>
+<div *ngIf="votes?.length === 0" class="withoutNotifications">
+  暂无消息!
+</div>

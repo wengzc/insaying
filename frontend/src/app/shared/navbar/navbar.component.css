@@ -1,0 +1,125 @@
+.top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 45px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.22);
+  background: #fff;
+  color: #556;
+  z-index: 1000;
+}
+.navbar {
+  position: relative;
+  height: 45px;
+  width: 65%;
+  margin: auto;
+}
+nav {
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-align: right;
+}
+/*nav a.creating {*/
+  /*display: none;*/
+/*}*/
+nav a {
+  margin-right: 10px;
+  /*color: #556;*/
+  color: #778087;
+  /*opacity: 0.7;*/
+  font-size: 18px;
+  line-height: 45px;
+}
+nav a:hover {
+  border-bottom: 1px solid;
+  color: black;
+  /*opacity: 1;*/
+}
+nav a.active {
+  opacity: 1;
+  border-bottom: none;
+  color: black;
+}
+/*.flag {*/
+  /*position: absolute;*/
+  /*left: 0;*/
+  /*top: -1px;*/
+/*}*/
+.flag a{
+  line-height: 45px;
+  color: #000;
+  font-size: 30px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 500;
+}
+.search {
+  position: relative;
+  left: 100px;
+  top: 0;
+  width: 25%;
+  height: 50px;
+  color: #556;
+}
+.search input {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  height: 30px;
+  border-radius: 15px;
+  box-shadow: none;
+  border: 1px solid #556;
+  font-size: 15px;
+  padding-left: 1em;
+}
+.search input:focus {
+  /*outline: none;*/
+  /*border-color: #5cb85c;*/
+  /*box-shadow: 0 0 5px rgba(207, 220, 0, 0.4);*/
+  border-radius: 5px;
+}
+.search .fa {
+  position: absolute;
+  right: 10px;
+  top: 17px;
+}
+a.notifications {
+  position: relative;
+}
+a.notifications span {
+  position: absolute;
+  bottom: 55%;
+  left: 60%;
+  line-height: normal;
+  padding: 1px 4px;
+  font-size: 11px;
+  color: #fff;
+  border: 2px solid #fff;
+  background-color: #f75659;
+  border-radius: 20px;
+}
+
+
+@media (max-width: 767px){
+  .navbar {
+    width: 95%;
+  }
+  nav a.homepage {
+    display: none;
+  }
+  .flag a{
+    font-size: 26px;
+  }
+  nav a {
+    font-size: 16px;
+    margin-right: 4px;
+  }
+  .search {
+    display: none;
+  }
+}
+@media (min-width: 767px){
+  nav a.creating {
+  display: none;
+  }
+}

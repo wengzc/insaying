@@ -1,0 +1,48 @@
+.item {
+  position: relative;
+  border-bottom: 1px solid #DDD;
+  padding: 10px 10px 3px 10px;
+}
+.commentAvatar {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+}
+.commentAvatar img {
+  border-radius: 5px;
+}
+.commentCentent {
+  padding-left: 70px;
+}
+.commentCentent a:hover {
+  border-bottom: 1px solid;
+}
+.commentCentent .commentInfo a {
+  font-size: 13px;
+}
+.commentCentent .commentInfo span {
+  color: #999;
+}
+.commentCentent .commentInfo span.replyContent {
+  color: #333;
+}
+.commentCentent p {
+  font-size: 16px;
+  margin-top: 5px;
+  word-wrap: break-word;
+}
+.commentCentent span {
+  font-size: 13px;
+  color: #999;
+}
+.commentCentent span.createdAt {
+  font-size: 12px;
+}
+.withoutNotifications {
+  min-height: 240px;
+  padding: 20px 10px;
+}
+.newComment {
+  /*background-color: #f8fafb;*/
+  background-color: #f4f8fb;
+}

@@ -1,0 +1,9 @@
+<div class="articleList" *ngIf="likesCount > 0">
+  <article-list [articlelist]="articlelist"></article-list>
+  <div class="page">
+    <pagination [activePage]="activePage" [lastPage]="lastPage" (onPrevPage)="prevPage($event)" (onNextPage)="nextPage($event)" [user_id]="user_id"></pagination>
+  </div>
+</div>
+<div *ngIf="likesCount === 0" class="withoutArticle">
+  暂无喜欢的文章!
+</div>

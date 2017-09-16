@@ -1,0 +1,26 @@
+<div  *ngFor="let article of articlelist">
+  <div class="articleItem">
+    <div class="avatar">
+      <a routerLink="/user/{{article?.author._id}}/article">
+        <img height="50" width="50" class="avatar" src="{{serverUrl}}/img/{{article?.author?.avatar}}">
+      </a>
+    </div>
+    <div class="title">
+      <a routerLink="/article/{{article._id}}">{{article?.title}}</a>
+      <div class="info">
+        <span>
+          <a routerLink="/user/{{article?.author._id}}/article" class="lighten">{{ article?.author.name }}</a>
+        </span>
+        <span class="dot">{{article?.created_at }}</span>
+        <span class="dot">{{article?.pv}}次阅读</span>
+        <span class="dot">
+          <a routerLink="/article/{{article._id}}" class="lighten" *ngIf="article?.commentsCount > 0">{{article?.commentsCount}}</a>
+          <span *ngIf="article?.commentsCount === 0">暂无</span>评论
+        </span>
+        <span class="dot likeCounts" *ngIf="article?.likesCount > 0">
+          <a routerLink="/article/{{article._id}}" class="lighten" >{{article?.likesCount}}</a> 喜欢
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

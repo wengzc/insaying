@@ -1,0 +1,28 @@
+<div class="mobi-top">
+  <div class="navbar">
+    <a href="javascript:void(0);" class="cancel" (click)="goBack()" >
+      取消
+    </a>
+    <a href="javascript:void(0);" class="mobi-update" (click)="update()">
+      更新
+    </a>
+  </div>
+</div>
+<div class="top">
+  <navbar></navbar>
+</div>
+<div class="main">
+  <div class="md-editor">
+    <input type="text" class="title" placeholder="请输入标题" [(ngModel)]="title" (ngModelChange)="valueChange()" (click)="valueChange()">
+    <div *ngIf="errorMsg1" class="warning">{{errorMsg1}}</div>
+    <smd-editor (smdChange)="smdChange($event)" (click)="valueChange()"></smd-editor>
+    <div *ngIf="errorMsg2" class="warning">{{errorMsg2}}</div>
+    <div *ngIf="publishResult" class="publishResult">
+      {{ alert?.msg }}
+    </div>
+    <div class="publish">
+      <button type="button" class="sumbit" (click)="update()">更新</button>
+      <i class="fa fa-paper-plane"></i>
+    </div>
+  </div>
+</div>

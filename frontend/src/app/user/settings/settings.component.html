@@ -1,0 +1,36 @@
+<navbar></navbar>
+<div class="main">
+  <div class="content">
+    <div class="sidebar">
+      <sidebar></sidebar>
+    </div>
+    <div class="settings">
+      <div class="tab-nav">
+        <ul>
+          <li>
+            <a routerLink="/user/settings/basics" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+              <i class="fa fa-cog"></i>基本资料
+            </a>
+          </li>
+          <li>
+            <a routerLink="/user/settings/avatar" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+              <i class="fa fa-photo"></i>更换头像
+            </a>
+          </li>
+          <li>
+            <a routerLink="/user/settings/password" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+              <i class="fa fa-key"></i>更改密码
+            </a>
+          </li>
+        </ul>
+      </div>
+      <router-outlet>
+      </router-outlet>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <div class="footer-inner">
+    <footer></footer>
+  </div>
+</div>

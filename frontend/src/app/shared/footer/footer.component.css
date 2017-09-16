@@ -1,0 +1,20 @@
+.content {
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+.item {
+  width: 100%;
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+  line-height: 1.8em
+}
+.item a {
+  color: #666;
+}
+.item a:hover {
+  color: #000;
+}
+.icp a{
+  color: #999;
+}

@@ -1,0 +1,16 @@
+<div *ngFor="let like of likes; let index = index">
+  <div class="item" [class.newLike]="like?.status === 0">
+    <div class="info">
+      <span> 获得 1 个喜欢 <i class="fa fa-heart-o"></i> :</span>
+      <a routerLink="/article/{{like?.article?._id}}">{{like?.article?.title }}</a>
+      <span>来自</span>
+      <a routerLink="/user/{{like?.user._id}}/article">
+        {{like?.user.name }}
+      </a>
+    </div>
+    <span class="createdAt">{{like?.created_at }}</span>
+  </div>
+</div>
+<div *ngIf="likes?.length === 0" class="withoutNotifications">
+  暂无消息!
+</div>

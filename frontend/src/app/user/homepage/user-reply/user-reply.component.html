@@ -1,0 +1,33 @@
+<div class="wrapper" *ngIf="commentsCount > 0">
+  <div *ngFor="let comment of comments; let index = index">
+    <div class="item">
+      <div class="commentAvatar">
+        <a routerLink="/user/{{comment?.author._id}}/article">
+          <img height="50" width="50" src="{{serverUrl}}/img/{{comment?.author?.avatar}}">
+        </a>
+      </div>
+      <div class="commentCentent">
+        <div class="commentInfo">
+          <a routerLink="/user/{{comment?.author._id}}/article">
+            {{comment?.author.name }}
+          </a>
+          <span class="dot">{{comment?.created_at }}</span>
+        </div>
+        <p>
+          <a routerLink="/user/{{comment?.receiver._id}}/article" *ngIf="comment?.root_comment">@{{comment?.receiver.name}}</a>
+          {{comment?.content}}
+        </p>
+        <span>来自
+          <a routerLink="/article/{{comment?.article?._id}}" *ngIf="comment?.article">{{comment?.article?.title }}</a>
+          <a routerLink="/article/{{comment?.root_article?._id}}" *ngIf="!comment?.article">{{comment?.root_article?.title }}</a>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="page">
+    <pagination [activePage]="activeCommentsPage" [lastPage]="lastPage" (onPrevPage)="prevPage()" (onNextPage)="nextPage()"></pagination>
+  </div>
+</div>
+<div *ngIf="commentsCount === 0" class="withoutAcount">
+  这个人很懒,还没有发表回复!
+</div>

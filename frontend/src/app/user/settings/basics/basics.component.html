@@ -1,0 +1,26 @@
+<div class="main">
+  <div class="item">
+    <span>用户名</span> {{userService?.userInfo?.name}}
+  </div>
+  <div class="item">
+    <span>个性签名</span>
+    <input type="text" [(ngModel)]="bio"  (ngModelChange)="valueChange()" (click)="valueChange()" name="bio">
+    <div *ngIf="bioErrorMsg" class="warning">{{bioErrorMsg}}</div>
+  </div>
+  <div class="item">
+    <span>Github</span>
+    <input type="text" [(ngModel)]="github" (ngModelChange)="valueChange()" (click)="valueChange()">
+  </div>
+  <div class="item">
+    <span>个人网站</span>
+    <input type="text" [(ngModel)]="website" (ngModelChange)="valueChange()" (click)="valueChange()">
+  </div>
+  <div class="item">
+    <span>邮箱</span>
+    <input type="text" [(ngModel)]="email" (ngModelChange)="valueChange()" (click)="valueChange()">
+  </div>
+  <button class="sumbit" (click)="changeBasics()">保存</button>
+  <div *ngIf="saveResult" class="saveResult">
+      {{ alert?.msg }}
+  </div>
+</div>

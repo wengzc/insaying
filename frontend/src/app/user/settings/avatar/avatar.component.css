@@ -1,0 +1,60 @@
+.main {
+  width: 100%;
+  min-height: 300px;
+  margin: 20px 10px;
+}
+
+.originalAvatar span, .newNvatar span {
+  display: inline-block;
+  width: 120px;
+  text-align: right;
+  margin-right: 10px;
+}
+.originalAvatar, .newNvatar {
+  margin-bottom: 20px;
+}
+.originalAvatar img{
+  border-radius: 5px;
+}
+.newNvatar input {
+  display: inline-block;
+}
+button.sumbit {
+  padding: 3px;
+  width: 60px;
+  margin-left: 135px;
+  font-size: 16px;
+  border: 1px solid rgba(35,35,38,0.25);
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 1px 1px 0 0 rgba(55,55,66,0.7);
+}
+button.sumbit:hover {
+  /*background-color: #f2f2f2;*/
+  background-color: #f9f9e5;
+  border: 1px solid rgba(35,35,38,0.5);
+}
+button.sumbit:focus {
+  outline: none;
+}
+.msg {
+  color: #a94342;
+  font-size: 1.2em;
+  margin-left: 135px;
+  margin-top: 10px;
+}
+.warning {
+  color: #a94342;
+  font-size: 1.2em;
+  margin-left: 135px;
+  margin-top: 10px;
+}
+
+
+
+@media (max-width: 767px) {
+  .newNvatar input {
+    width: 50%;
+  }
+}
+

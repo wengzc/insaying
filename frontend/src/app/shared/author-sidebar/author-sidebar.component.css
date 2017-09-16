@@ -1,0 +1,92 @@
+.wrapper {
+  width: 100%;
+}
+
+.panel {
+  padding: 10px;
+  background-color: #fff;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px 0 rgba(35,35,38,0.25);
+  margin-bottom: 15px;
+}
+.panel a {
+  color: #2c3f51;
+  font-size: 16px;
+}
+.panel a:hover {
+  color: #000;
+}
+.avatar_name {
+  margin-bottom: 10px;
+}
+.avatar_name .avatar {
+  margin-right: 10px;
+}
+.avatar_name .avatar img {
+  border-radius: 5px;
+}
+.avatar_name a span.name {
+  vertical-align: middle;
+}
+.avatar_name a span.tag {
+  font-size: 12px;
+  padding: 2px 3px;
+  border-radius: 3px;
+  background-color: #5cb85c;
+  color: #fff;
+}
+.bio {
+  font-size: 13px;
+}
+.author {
+  padding-left: 0;
+  padding-right: 0;
+}
+.author .topInfo {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #DDD;
+}
+.countInfo {
+  margin: 10px 10px 0 10px;
+  text-align: center;
+}
+.countInfo a {
+  padding: 0 8px 0 8px;
+  font-size: 13px;
+  border-right: 1px solid #DDD;
+  color: #888;
+}
+.countInfo a span.darkColor {
+  font-size: 15px;
+  color: #2c3f51;
+}
+.countInfo a:hover {
+  color: #000;
+}
+.countInfo a.receivedLikesCount {
+  border-right: none;
+}
+.countInfo a.receivedLikesCount:hover {
+  color: #888;
+}
+.createArticle {
+  text-align: center;
+}
+/*.info {*/
+  /*margin-bottom: 10px;*/
+  /*text-align: center;*/
+/*}*/
+/*.enter {*/
+  /*text-align: center;*/
+/*}*/
+/*.enter a {*/
+  /*color: #4f98d6;*/
+  /*font-size: 18px;*/
+  /*opacity: 0.8;*/
+/*}*/
+/*.enter a:hover {*/
+  /*border-bottom: 1px solid #000;*/
+/*}*/
