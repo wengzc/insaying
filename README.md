@@ -10,15 +10,15 @@ You can check out the demo at [this link](http://www.insaying.com).
 ## Screen Shots
 
 
-![](http://oh3ojs6ov.bkt.clouddn.com/home.png)
+![](http://oh3ojs6ov.bkt.clouddn.com/home.jpg)
 
-![](http://oh3ojs6ov.bkt.clouddn.com/article.png)
+![](http://oh3ojs6ov.bkt.clouddn.com/article.jpg)
 
-![](http://oh3ojs6ov.bkt.clouddn.com/notification.png)
+![](http://oh3ojs6ov.bkt.clouddn.com/notification.jpg)
 
-![](http://oh3ojs6ov.bkt.clouddn.com/homepage.png)
+![](http://oh3ojs6ov.bkt.clouddn.com/homepage.jpg)
 
-![](http://oh3ojs6ov.bkt.clouddn.com/login.png)
+![](http://oh3ojs6ov.bkt.clouddn.com/login.jpg)
 
 ## Requirements
 
