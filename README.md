@@ -1,7 +1,7 @@
 # inSaying
 
 
-This is a multi-person blog based on the MEAN(MongoDB、Express js、Angular js、Node js) architecture.
+This is a multi-person blog based on the MEAN(MongoDB、Express、Angular、Node js) architecture.
 
 You can check out the demo at [this link](http://www.insaying.com).
 
