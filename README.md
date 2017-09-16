@@ -35,13 +35,13 @@ After installing inSaying, follow these steps:
 
 2.In the file backend/config/default.js set the MongoDB connection string to access your new database.
 
-3.In the command line type the following:
+3.In the command line type the following command:
 
     $ cd backend
     $ npm install
     $ node index
     
-Then switch the backend directory  to frontend directory and run the following command:
+Then switch the backend directory  to frontend directory and type the following command:
 
 	$ cd frontend
 	$ npm install
