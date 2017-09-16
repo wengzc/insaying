@@ -1,6 +1,5 @@
 # inSaying
 
----------------
 
 This is a multi-person blog based on the MEAN(MongoDB、Express js、Angular js、Node js) architecture.
 
@@ -10,7 +9,6 @@ You can check out the demo at [this link](http://www.insaying.com).
 
 ## Screen Shots
 
----------------
 
 ![](http://oh3ojs6ov.bkt.clouddn.com/home.png)
 
@@ -24,18 +22,14 @@ You can check out the demo at [this link](http://www.insaying.com).
 
 ## Requirements
 
----------------
 Node.js 6.x +
 
 ## Installation
-
----------------
 
     $ git clone git@github.com:wengzc/insaying.git
 
 ## Run 
 
----------------
     $ cd backend
     $ npm install
     $ node index
@@ -49,8 +43,6 @@ Then switch the backend directory  to frontend directory and run the following c
 ## License
 
 Copyright (c) 2017 wengzc
-
----------------
 
 Released under the MIT license:
 
