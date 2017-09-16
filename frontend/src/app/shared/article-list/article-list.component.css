@@ -10,7 +10,7 @@
   border-radius: 5px;
 }
 .articleItem .title {
-  padding-left: 70px;
+  padding-left: 60px;
 }
 .articleItem .title a {
   font-size: 20px;
@@ -34,7 +34,3 @@
   content: "  •  ";
 }
 
-@media (max-width: 767px) {
-  .articleItem .title {
-    padding-left: 60px;
-  }}

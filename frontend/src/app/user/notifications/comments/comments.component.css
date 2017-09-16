@@ -12,7 +12,7 @@
   border-radius: 5px;
 }
 .commentCentent {
-  padding-left: 70px;
+  padding-left: 60px;
 }
 .commentCentent a:hover {
   border-bottom: 1px solid;
@@ -43,6 +43,5 @@
   padding: 20px 10px;
 }
 .newComment {
-  /*background-color: #f8fafb;*/
   background-color: #f4f8fb;
 }

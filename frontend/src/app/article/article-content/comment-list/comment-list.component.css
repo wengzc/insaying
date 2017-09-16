@@ -20,7 +20,7 @@
   border-radius: 5px;
 }
 .commentCentent {
-  padding-left: 70px;
+  padding-left: 60px;
   padding-bottom: 10px;
   position: relative;
 }
@@ -76,7 +76,7 @@ ul.dropdown-menu {
   word-wrap: break-word;
 }
 .replies {
-  margin-left: 70px;
+  margin-left: 60px;
   padding: 10px 0 10px 0;
   border-top: 1px solid #eee;
 }
@@ -166,12 +166,3 @@ textarea:focus {
 }
 
 
-
-@media (max-width: 767px) {
-  .commentCentent {
-    padding-left: 60px;
-  }
-  .replies {
-    margin-left: 60px;
-  }
-}

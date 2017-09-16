@@ -12,7 +12,7 @@
   border-radius: 5px;
 }
 .commentCentent {
-  padding-left: 70px;
+  padding-left: 60px;
 }
 .commentCentent .commentInfo a {
   font-size: 12px;
@@ -37,7 +37,6 @@
 }
 .commentCentent span {
   color: #999;
-  /*font-size: 13px;*/
 }
 .commentCentent span a:hover {
   border-bottom: 1px solid;
