@@ -34,7 +34,7 @@
           <a href="javascript:void(0);" (click)="selectComment(comment)">
             <i class="fa fa-mail-reply"></i>
           </a>
-          <div  class="btn-group" dropdown container="body" *ngIf="userService.isLogin && userService?.userInfo?._id === comment?.author?._id">
+          <div  class="btn-group" dropdown container="body" *ngIf="userService.isLogin && userService?.userInfo?._id === articleAuthor?._id">
             <a href="javascript:void(0);">
               <i dropdownToggle class="fa fa-ellipsis-h" ></i>
             </a>
@@ -66,7 +66,7 @@
               <a href="javascript:void(0);" (click)="selectComment(comment, reply)">
                 <i class="fa fa-mail-reply"></i>
               </a>
-              <div  class="btn-group" dropdown container="body" *ngIf="userService.isLogin && userService?.userInfo?._id === reply?.author?._id">
+              <div  class="btn-group" dropdown container="body" *ngIf="userService.isLogin && userService?.userInfo?._id === articleAuthor?._id">
                 <a href="javascript:void(0);">
                   <i dropdownToggle class="fa fa-ellipsis-h" ></i>
                 </a>

@@ -48,7 +48,7 @@
     </div>
   </div>
   <div class="commentlist">
-    <comment-list [commentlist]="comments" [commentsCount]="commentsCount" [articleAuthor]="article?.author.name"
+    <comment-list [commentlist]="comments" [commentsCount]="commentsCount" [articleAuthor]="article?.author"
                   (onPublishReply)="publishReply($event)" (onDelete)="deleteComment($event)" (onVote)="vote($event)"></comment-list>
     <div class="page" *ngIf="commentsCount > 0">
       <pagination [activePage]="activeCommentsPage" [lastPage]="lastPage" (onPrevPage)="prevPage()" (onNextPage)="nextPage()"></pagination>

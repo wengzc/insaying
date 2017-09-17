@@ -23,7 +23,7 @@ export class CommentListComponent implements OnInit {
 
   @Input() commentlist: any;
   @Input() commentsCount: number;
-  @Input() articleAuthor: string;
+  @Input() articleAuthor: any;
   @Output() onDelete = new EventEmitter<string>();
   @Output() onVote = new EventEmitter<string>();
   @Output() onPublishReply = new EventEmitter();
