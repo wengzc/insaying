@@ -14,7 +14,7 @@ You can check out the demo at [this link](http://www.insaying.com).
 
 ![](http://oh3ojs6ov.bkt.clouddn.com/2.png)
 
-![](http://oh3ojs6ov.bkt.clouddn.com/4.png)
+![](http://oh3ojs6ov.bkt.clouddn.com/6.png)
 
 ![](http://oh3ojs6ov.bkt.clouddn.com/3.png)
 
