@@ -16,7 +16,6 @@ import { ArticleWriteService } from './article-write.service';
 })
 export class ArticleWriteComponent implements OnInit {
 
-
   constructor(
     public router: Router,
     private location: Location,
