@@ -28,7 +28,6 @@
 .articleItem .title span a.lighten{
   font-size: 13px;
   color: #2c3f51;
-  /*opacity: 0.8;*/
 }
 .articleItem .title .info span.dot:before {
   content: "  •  ";

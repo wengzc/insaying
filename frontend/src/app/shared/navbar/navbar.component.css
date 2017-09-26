@@ -25,16 +25,12 @@ nav {
 /*}*/
 nav a {
   margin-right: 10px;
-  /*color: #556;*/
   color: #778087;
-  /*opacity: 0.7;*/
   font-size: 18px;
   line-height: 45px;
 }
 nav a:hover {
-  border-bottom: 1px solid;
   color: black;
-  /*opacity: 1;*/
 }
 nav a.active {
   opacity: 1;

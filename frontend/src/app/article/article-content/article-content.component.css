@@ -6,7 +6,6 @@
 .wrapper {
   width: 65%;
   margin: 0 auto;
-  /*padding: 0 10px;*/
 }
 .sidebar {
   float: right;
@@ -44,9 +43,6 @@
 span.dot:before {
   content: "  •  ";
 }
-/*.articleInfo span a {*/
-  /*color: #2c3f51;*/
-/*}*/
 .html {
   width: 100%;
   padding: 0 10px 120px 10px;

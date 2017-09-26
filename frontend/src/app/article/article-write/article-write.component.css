@@ -55,7 +55,6 @@
   min-height: 44px;
   width: 100%;
   font-size: 25px;
-  /*overflow: hidden;*/
   border-top: none;
   border-left: none;
   border-right: none;
@@ -68,8 +67,6 @@
 .publish {
   width: 100px;
   position: relative;
-  /*top: 20px;*/
-  /*right: 10px;*/
   float: right;
   margin-top: 20px;
 }
