@@ -4,7 +4,6 @@ import { HttpModule } from '@angular/http';
 
 // import { ResolveService } from './shared/services/resolve.service';
 
-
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
