@@ -2,7 +2,7 @@
  * Created by Administrator on 2017/8/2.
  */
 import {NgModule} from '@angular/core';
-import {Routes, RouterModule} from '@angular/router';
+import {Routes, RouterModule, PreloadAllModules} from '@angular/router';
 import { HomeComponent } from './home/index';
 
 export const routes: Routes = [
@@ -21,7 +21,13 @@ export const routes: Routes = [
 ]
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes,{useHash:true})],
+  imports: [RouterModule.forRoot(
+    routes,
+    {
+      useHash:true,
+      preloadingStrategy: PreloadAllModules
+    }
+  )],
   exports: [RouterModule]
 })
 export class AppRoutingModule {
