@@ -6,10 +6,10 @@
       <sidebar></sidebar>
     </div>
     <div class="wrapper">
-      <div class="articleList">
+      <div class="articleList" *ngIf="articlesCount > 0">
         <article-list [articlelist]="articles"></article-list>
         <div class="page">
-          <pagination [activePage]="activePage" [lastPage]="lastPage" (onPrevPage)="prevPage()" (onNextPage)="nextPage()" ></pagination>
+          <pagination [activePage]="activePage" [lastPage]="lastPage" (onPrevPage)="prevPage()" (onNextPage)="nextPage()"></pagination>
         </div>
       </div>
     </div>
