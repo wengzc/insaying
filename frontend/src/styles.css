@@ -46,9 +46,9 @@ body {
   overflow: hidden;
 }
 .loading {
-  font-size: 30px;
-  text-align: center;
-  margin-top: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
 
 
