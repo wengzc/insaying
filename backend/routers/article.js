@@ -36,18 +36,22 @@ router.post('/', function (req,res) {
 router.put('/:article_id/content', function (req,res) {
     var articleId = req.params.article_id;
     var author = req.session.user._id;
-    var article = {
+    var updatedArticle = {
         title: req.body.title,
         content: req.body.content,
         updated_at: moment().format('YYYY-MM-DD HH:mm')
     }
-    ArticleModel.updateContent(articleId, author, article).then(function (result) {
-        var article = result;
-        res.json({
-            message: '文章更新成功,正在跳往文章页面中...',
+    ArticleModel.getArticleById(articleId).then(function(article) {
+        if(article.author._id.toString() !== author.toString()) {
+            throw new Error('没有权限');
+        }
+        ArticleModel.updateContent(articleId, author, updatedArticle).then(function (result) {
+            res.json({
+                message: '文章更新成功,正在跳往文章页面中...',
+            })
+        }).catch(function (e) {
+            console.log("error:"+ e);
         })
-    }).catch(function (e) {
-        console.log("error:"+ e);
     })
 })
 
@@ -65,15 +69,21 @@ router.get('/likes', function (req, res) {
 
 //删除文章
 router.delete('/:article_id', function (req, res) {
-    var article_id = req.params.article_id;
-    ArticleModel.delete(article_id).then(function (result) {
-        CommentModel.deleteCommentsByArticleId({ article: article_id });
-        CommentModel.deleteCommentsByArticleId({ root_article: article_id });
-        LikeModel.deleteLikesByArticleId(article_id);
-        VoteModel.deleteVotesByRootArticleId(article_id);
-    }).then(function (result) {
-        res.json({
-            message: "文章删除成功"
+    var articleId = req.params.article_id;
+    var author = req.session.user._id;
+    ArticleModel.getArticleById(articleId).then(function(article) {
+        if(article.author._id.toString() !== author.toString()) {
+            throw new Error('没有权限');
+        }
+        ArticleModel.delete(articleId).then(function (result) {
+            CommentModel.deleteCommentsByArticleId({ article: articleId });
+            CommentModel.deleteCommentsByArticleId({ root_article: articleId });
+            LikeModel.deleteLikesByArticleId(articleId);
+            VoteModel.deleteVotesByRootArticleId(articleId);
+        }).then(function (result) {
+            res.json({
+                message: "文章删除成功"
+            })
         })
     })
 })
@@ -182,6 +192,7 @@ router.get('/user/like', function (req,res) {
     LikeModel.getUserLikes(data).then(function (likes) {
             return Promise.all(likes.map(function (like) {
                 return ArticleModel.getArticleById(like.article._id).then(function (article) {
+                    article.content = '';
                     like.article = article;
                     return like;
                 });
