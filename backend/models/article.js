@@ -55,6 +55,7 @@ module.exports = {
         var skipNumber = (data.activePage-1) * 10;
         return Article
             .find(data.article)
+            .select("author title pv created_at")
             .populate({path: 'author', select: 'name avatar bio', model: "User"})
             .sort({ _id: -1 })
             .skip(skipNumber)

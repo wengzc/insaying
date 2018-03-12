@@ -9,7 +9,7 @@ module.exports = {
         return Comment
             .create(comment);
     },
-
+    
     //获取文章评论列表
     getArticleCommentList: function (data) {
         var skipNumber = (data.activeCommentsPage-1) * 10;

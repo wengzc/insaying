@@ -39,7 +39,7 @@ module.exports = {
             .find({
                 user: data.user_id
             })
-            .populate({ path: 'article', model: "Article" })
+            .populate({ path: 'article', select: '_id',model: "Article" })
             .sort({ _id: -1 })
             .skip(skipNumber)
             .limit(10)
